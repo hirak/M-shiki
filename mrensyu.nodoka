@@ -1,0 +1,200 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Nodoka - dotjp.nodoka
+# Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
+#
+# Modify by applet on 2010-03-29
+
+# まずキーボード定義を読み込む。
+if ( USE104 )
+  include "104.nodoka"			# 104 キーボード設定
+  if ( USE109on104 )
+    include "109on104.nodoka"		# 104 キーボードを 109 キーボード風に
+  endif
+else
+  include "109.nodoka"			# 109 キーボード設定
+  if ( USE104on109 )
+    include "104on109.nodoka"		# 109 キーボードを 104 キーボード風に
+  endif
+endif
+
+if ( USEdefault )
+  include	"default2.nodoka"	# Emacs ライクなさまざまな設定
+endif
+
+
+# Global keymap 設定
+keymap Global
+
+
+# 以下は、便宜上、設定するもの
+key C-A-D = &DescribeBindings 		# 現在のキーマップのログ出力
+key F1 = &SendPostMessage("PostTray",,"のどか", 0x0205, 0, 0)	# のどかのメニューを開く
+
+
+# シフト+F2: 日本語キーボード、英語キーボード 切り替えトグル
+if ( USE109 )
+  if ( USE104on109 )
+    key S-F2 => &IconColor(0) &HelpMessage("Reloaded", "日本語 109 キーボード") &LoadSetting("日本語 109 キーボード")
+  else
+    key S-F2 => &IconColor(2) &HelpMessage("Reloaded", "日本語 109 キーボード (104 風)") &LoadSetting("日本語 109 キーボード (104 風)")
+  endif
+endif
+if ( USE104 )
+  if ( USE109on104 )
+    key S-F2 => &IconColor(0) &HelpMessage("Reloaded", "英語 104 キーボード") &LoadSetting("英語 104 キーボード")
+  else
+    key S-F2 => &IconColor(2) &HelpMessage("Reloaded", "英語 104 キーボード (109 風)") &LoadSetting("英語 104 キーボード (109 風)")
+  endif
+endif
+
+
+# 以下に、ご自身の設定を御書き下さい。
+
+# CapsLockをCtrlに。
+mod ctrl += 英数
+key *英数 = *LeftControl
+
+# カタカナひらがなをDeleteに。
+key *ひらがな = *Delete
+
+# 無変換を左シフトへ
+key *無変換 =
+mod mod0 = 無変換
+
+# 変換を右シフトへ
+key *変換 =
+mod mod1 = 変換
+
+# 通常配列
+key Q = Q
+key W = L
+key E = J
+key R = F
+key T = C
+key Y = M
+key U = Y
+key I = R
+key O = W
+key P = P
+key A = E
+key S = U
+key D = I
+key F = A
+key G = O
+key H = K
+key J = S
+key K = T
+key L = N
+key Semicolon = H
+key Z = E I
+key X = X
+key C = V
+key V = A I
+key B = O U
+key N = G
+key M = Z
+key Comma = D
+key FullStop = FullStop
+key Solidus = B
+
+# 母音シフト(mod1)
+key M1-Q = E K I
+key M1-W = U K U
+key M1-E = I K U
+key M1-R = A K U
+key M1-T = O K U
+key M1-A = E N N
+key M1-S = U N N
+key M1-D = I N N
+key M1-F = A N N
+key M1-G = O N N
+key M1-Z = E T U
+key M1-X = U T U
+key M1-C = I T U
+key M1-V = A T U
+key M1-B = O T U
+
+# 子音シフト(mod0)
+key M0-Y = M Y
+key M0-U = X T U
+key M0-I = R Y
+key M0-O = N N
+key M0-P = P Y
+key M0-H = K Y
+key M0-J = S Y
+key M0-K = T Y
+key M0-L = N Y
+key M0-Semicolon = H Y
+key M0-N = G Y
+key M0-M = Z Y
+key M0-Comma = D Y
+key M0-FullStop = Comma
+key M0-Solidus = B Y
+
+# 変換中フラグ削除
+key IL-*IC- =　　　　　　#1
+# 通常配列
+key Q = Q
+key W = L
+key E = J
+key R = F
+key T = C
+key Y = M
+key U = Y
+key I = R
+key O = W
+key P = P
+key A = E
+key S = U
+key D = I
+key F = A
+key G = O
+key H = K
+key J = S
+key K = T
+key L = N
+key Semicolon = H
+key Z = E I
+key X = X
+key C = C
+key V = A I
+key B = O U
+key N = G
+key M = Z
+key Comma = D
+key FullStop = FullStop
+key Solidus = B
+
+# 母音シフト(mod1)
+key M1-Q = E K I
+key M1-W = U K U
+key M1-E = I K U
+key M1-R = A K U
+key M1-T = O K U
+key M1-A = E N N
+key M1-S = U N N
+key M1-D = I N N
+key M1-F = A N N
+key M1-G = O N N
+key M1-Z = E T U
+key M1-X = U T U
+key M1-C = I T U
+key M1-V = A T U
+key M1-B = O T U
+
+# 子音シフト(mod0)
+key M0-Y = M Y
+key M0-U = X T U
+key M0-I = R Y
+key M0-O = N N
+key M0-P = P Y
+key M0-H = K Y
+key M0-J = S Y
+key M0-K = T Y
+key M0-L = N Y
+key M0-Semicolon = H Y
+key M0-N = G Y
+key M0-M = Z Y
+key M0-Comma = D Y
+key M0-FullStop = Comma
+key M0-Solidus = B Y
