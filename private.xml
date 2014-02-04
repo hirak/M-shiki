@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<root>
+  <list>
+    <item>
+      <name>Mshiki</name>
+      <identifier>mshiki.i</identifier>
+      <autogen>--KeyOverlaidModifier-- KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyOverlaidModifier-- KeyCode::JIS_KANA, KeyCode::VK_MODIFIER_EXTRA2, KeyCode::JIS_KANA</autogen>
+    </item>
+    <item>
+      <name>M式</name>
+      <appendix>M式ローマ字配列</appendix>
+      <identifier>mshiki</identifier>
+      <inputmodedetail_only>JAPANESE_HIRAGANA, JAPANESE</inputmodedetail_only>
+      <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::NONE, KeyCode::Q</autogen>
+      <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::NONE, KeyCode::L</autogen>
+      <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::NONE, KeyCode::J</autogen>
+      <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::NONE, KeyCode::F</autogen>
+      <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::NONE, KeyCode::C</autogen>
+      <autogen>--KeyToKey-- KeyCode::Y, ModifierFlag::NONE, KeyCode::M</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::NONE, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::NONE, KeyCode::R</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::NONE, KeyCode::W</autogen>
+      <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::NONE, KeyCode::P</autogen>
+      <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::NONE, KeyCode::E</autogen>
+      <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::NONE, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::NONE, KeyCode::I</autogen>
+      <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::NONE, KeyCode::A</autogen>
+      <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::NONE, KeyCode::O</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::NONE, KeyCode::K</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::NONE, KeyCode::S</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::NONE, KeyCode::T</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::NONE, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::NONE, KeyCode::H</autogen>
+      <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::NONE, KeyCode::E, KeyCode::I</autogen>
+      <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::NONE, KeyCode::X</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::NONE, KeyCode::C</autogen>
+      <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::NONE, KeyCode::A, KeyCode::I</autogen>
+      <autogen>--KeyToKey-- KeyCode::B, ModifierFlag::NONE, KeyCode::O, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::NONE, KeyCode::G</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::NONE, KeyCode::Z</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::NONE, KeyCode::D</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::NONE, KeyCode::DOT</autogen>
+      <autogen>--KeyToKey-- KeyCode::SLASH, ModifierFlag::NONE, KeyCode::B</autogen>
+
+      <!-- left -->
+      <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::EXTRA2, KeyCode::E, KeyCode::K, KeyCode::I</autogen>
+      <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::EXTRA2, KeyCode::U, KeyCode::K, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::EXTRA2, KeyCode::I, KeyCode::K, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::EXTRA2, KeyCode::A, KeyCode::K, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::EXTRA2, KeyCode::O, KeyCode::K, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::EXTRA2, KeyCode::E, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::EXTRA2, KeyCode::U, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::EXTRA2, KeyCode::I, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::EXTRA2, KeyCode::A, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::EXTRA2, KeyCode::O, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::EXTRA2, KeyCode::E, KeyCode::T, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::EXTRA2, KeyCode::U, KeyCode::T, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::EXTRA2, KeyCode::I, KeyCode::T, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::EXTRA2, KeyCode::A, KeyCode::T, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::B, ModifierFlag::EXTRA2, KeyCode::O, KeyCode::T, KeyCode::U</autogen>
+
+      <!-- right -->
+      <autogen>--KeyToKey-- KeyCode::Y, ModifierFlag::EXTRA1, KeyCode::M, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::EXTRA1, KeyCode::X, KeyCode::T, KeyCode::U</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::EXTRA1, KeyCode::R, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::EXTRA1, KeyCode::N, KeyCode::N</autogen>
+      <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::EXTRA1, KeyCode::P, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::EXTRA1, KeyCode::K, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::EXTRA1, KeyCode::S, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::EXTRA1, KeyCode::T, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::EXTRA1, KeyCode::N, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::EXTRA1, KeyCode::H, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::EXTRA1, KeyCode::G, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::EXTRA1, KeyCode::Z, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::EXTRA1, KeyCode::D, KeyCode::Y</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::EXTRA1, KeyCode::COMMA</autogen>
+      <autogen>--KeyToKey-- KeyCode::SLASH, ModifierFlag::EXTRA1, KeyCode::B, KeyCode::Y</autogen>
+    </item>
+  </list>
+</root>
