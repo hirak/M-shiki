@@ -1,7 +1,7 @@
 <?php
 $map = <<<_MAP_
 q:v
-w:l
+w:j
 e:slash
 r:f
 t:c
@@ -56,11 +56,11 @@ k,shift:t,y
 l,shift:n,y
 semicolon,shift:h,y
 
-z,shift:e,t
-x,shift:u,t
-c,shift:u,t
-v,shift:a,t
-b,shift:o,t
+z,shift:e,t,u
+x,shift:u,t,u
+c,shift:u,t,u
+v,shift:a,t,u
+b,shift:o,t,u
 n,shift:g,y
 m,shift:z,y
 comma,shift:d,y
@@ -87,9 +87,7 @@ foreach (explode(PHP_EOL, $map) as $line) {
 { "type":"basic",
   "from": <?=json_encode($from_array)?>,
   "to": <?= json_encode($to_array) ?>,
-  "conditions": [
-    {"type":"input_source_if", "input_sources":[{"language":"ja"}]}
-  ]
+  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
 },
 <?php
     /*
