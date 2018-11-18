@@ -145,6 +145,26 @@
             ]
         },
         {
+            "description": "１秒間押し続けないとcommand-wが実行されない設定",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "w",
+                        "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
+                    },
+                    "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
+                    "to_if_held_down": [
+                        {
+                            "key_code": "w",
+                            "modifiers": [ "command" ],
+                            "repeat": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "日本語入力中はM式配列にする",
             "manipulators": 
 [
