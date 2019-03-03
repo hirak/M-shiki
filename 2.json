@@ -175,7 +175,7 @@
 },
 { "type":"basic",
   "from": {"key_code":"w"},
-  "to": [{"key_code":"j"}],
+  "to": [{"key_code":"l"}],
   "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
 },
 { "type":"basic",

@@ -1,7 +1,7 @@
 <?php
 $map = <<<_MAP_
 q:v
-w:j
+w:l
 e:slash
 r:f
 t:c
