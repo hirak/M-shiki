@@ -2,12 +2,13 @@
     "title": "hiraku set",
     "rules": [
         {
-            "description": "CapsLockをfnに, fn+hjklを矢印キーに",
+            "description": "CapsLockをfnに(単発でCapsLockのまま) fn+hjklを矢印キーに",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {"key_code": "caps_lock"},
-                    "to": [{"key_code":"fn"}]
+                    "to": [{"key_code":"fn", "lazy": true}],
+                    "to_if_alone": [{"key_code": "caps_lock"}]
                 },
                 {
                     "type": "basic",
