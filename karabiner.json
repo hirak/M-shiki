@@ -1,552 +1,1391 @@
 {
-    "title": "hiraku set",
-    "rules": [
+    "profiles": [
         {
-            "description": "CapsLockをfnに fn+hjklを矢印キーに",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {"key_code": "caps_lock", "modifiers": {"optional": ["any"]}},
-                    "to": [{"key_code":"fn", "lazy": true}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "h", "modifiers": { "mandatory": [ "fn" ] }},
-                    "to": [{"key_code": "left_arrow"}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "j", "modifiers": { "mandatory": [ "fn" ] }},
-                    "to": [{"key_code": "down_arrow"}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "k", "modifiers": { "mandatory": [ "fn" ] }},
-                    "to": [{"key_code": "up_arrow"}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "l", "modifiers": { "mandatory": [ "fn" ] }},
-                    "to": [{"key_code": "right_arrow"}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "h", "modifiers": { "mandatory": [ "fn", "shift" ] }},
-                    "to": [{"key_code": "left_arrow", "modifiers": ["shift"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "j", "modifiers": { "mandatory": [ "fn", "shift" ] }},
-                    "to": [{"key_code": "down_arrow", "modifiers": ["shift"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "k", "modifiers": { "mandatory": [ "fn", "shift" ] }},
-                    "to": [{"key_code": "up_arrow", "modifiers": ["shift"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "l", "modifiers": { "mandatory": [ "fn", "shift" ] }},
-                    "to": [{"key_code": "right_arrow", "modifiers": ["shift"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "h", "modifiers": { "mandatory": [ "fn", "control" ] }},
-                    "to": [{"key_code": "left_arrow", "modifiers": ["control"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "j", "modifiers": { "mandatory": [ "fn", "control" ] }},
-                    "to": [{"key_code": "down_arrow", "modifiers": ["control"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "k", "modifiers": { "mandatory": [ "fn", "control" ] }},
-                    "to": [{"key_code": "up_arrow", "modifiers": ["control"]}]
-                },
-                {
-                    "type": "basic",
-                    "from": {"key_code": "l", "modifiers": { "mandatory": [ "fn", "control" ] }},
-                    "to": [{"key_code": "right_arrow", "modifiers": ["control"]}]
-                }
-            ]
-        },
-        {
-            "description": "半角全角をcmdに",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {"key_code": "grave_accent_and_tilde"},
-                    "to": [{"key_code": "left_command"}]
-                }
-            ]
-        },
-        {
-            "description": "単発left_controlでescを入力",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_control",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "CapsLockをfnに, fn+hjklを矢印キーに",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn",
+                                        "lazy": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["fn", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["fn", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["fn", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["fn", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["fn", "control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["fn", "control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["fn", "control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["fn", "control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
-                    "to": [
+                    {
+                        "description": "半角全角をcmdに",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "grave_accent_and_tilde" },
+                                "to": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "単発left_controlでescを入力",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "英数/かな押しっぱなしでshift",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "japanese_kana",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_kana" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "japanese_eisuu",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_eisuu" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "underscoreをbackslashにする",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "international1",
+                                    "modifiers": { "optional": ["caps_lock"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "international3",
+                                        "modifiers": ["left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "１秒間押し続けないとcommand-qが実行されない設定",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": ["command"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "変換を有効にする",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "japanese_pc_xfer",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "japanese_kana" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "無変換を有効にする",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "japanese_pc_nfer",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "japanese_eisuu" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "日本語入力中はM式配列にする",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "q" },
+                                "to": [{ "key_code": "v" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "w" },
+                                "to": [{ "key_code": "l" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "e" },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "r" },
+                                "to": [{ "key_code": "f" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "t" },
+                                "to": [{ "key_code": "c" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "y" },
+                                "to": [{ "key_code": "m" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "u" },
+                                "to": [{ "key_code": "y" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "i" },
+                                "to": [{ "key_code": "r" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "o" },
+                                "to": [{ "key_code": "w" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "p" },
+                                "to": [{ "key_code": "p" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "a" },
+                                "to": [{ "key_code": "e" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "s" },
+                                "to": [{ "key_code": "u" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "d" },
+                                "to": [{ "key_code": "i" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "f" },
+                                "to": [{ "key_code": "a" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "g" },
+                                "to": [{ "key_code": "o" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "h" },
+                                "to": [{ "key_code": "k" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": [{ "key_code": "s" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": [{ "key_code": "t" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "l" },
+                                "to": [{ "key_code": "n" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "semicolon" },
+                                "to": [{ "key_code": "h" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "z" },
+                                "to": [
+                                    { "key_code": "e" },
+                                    { "key_code": "i" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "x" },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "c" },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "i" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "v" },
+                                "to": [
+                                    { "key_code": "a" },
+                                    { "key_code": "i" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "b" },
+                                "to": [
+                                    { "key_code": "o" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "n" },
+                                "to": [{ "key_code": "g" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "m" },
+                                "to": [{ "key_code": "z" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "comma" },
+                                "to": [{ "key_code": "d" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "period" },
+                                "to": [{ "key_code": "period" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "slash" },
+                                "to": [{ "key_code": "b" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "e" },
+                                    { "key_code": "k" },
+                                    { "key_code": "i" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "k" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "i" },
+                                    { "key_code": "k" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "a" },
+                                    { "key_code": "k" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "o" },
+                                    { "key_code": "k" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "m" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "x" },
+                                    { "key_code": "t" },
+                                    { "key_code": "u" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "r" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "p" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "e" },
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "i" },
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "a" },
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "o" },
+                                    { "key_code": "n" },
+                                    { "key_code": "n" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "k" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "s" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "t" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "n" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "h" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "e" },
+                                    { "key_code": "t" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "t" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "u" },
+                                    { "key_code": "t" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "a" },
+                                    { "key_code": "t" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "o" },
+                                    { "key_code": "t" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "g" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "z" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "d" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [{ "key_code": "comma" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "b" },
+                                    { "key_code": "y" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "１秒間押し続けないとcommand-wが実行されない設定",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": ["command"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 8961,
+                        "vendor_id": 4617
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 34050,
+                        "vendor_id": 2652
+                    },
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
                         {
-                            "key_code": "left_control",
-                            "lazy": true
+                            "from": { "key_code": "japanese_pc_katakana" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_nfer" },
+                            "to": [{ "key_code": "japanese_eisuu" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_xfer" },
+                            "to": [{ "key_code": "japanese_kana" }]
                         }
-                    ],
-                    "to_if_alone": [
-                        { "key_code": "escape" }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "英数/かな押しっぱなしでshift",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": { "key_code": "lang2", "modifiers": { "optional": ["any"] } },
-                    "to": [ { "key_code": "left_shift", "lazy": true } ],
-                    "to_if_alone": [
-                        { "key_code": "lang2" }
                     ]
                 },
                 {
-                    "type": "basic",
-                    "from": { "key_code": "lang1", "modifiers": { "optional": ["any"] } },
-                    "to": [ { "key_code": "left_shift", "lazy": true } ],
-                    "to_if_alone": [
-                        { "key_code": "lang1" }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "tab押しっぱなしでshift",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "tab",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 42,
+                        "vendor_id": 9610
                     },
-                    "to": [
+                    "simple_modifications": [
                         {
-                            "key_code": "left_shift",
-                            "lazy": true
-                        }
-                    ],
-                    "to_if_alone": [
-                        { "key_code": "lang1" }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "無変換を英数へ",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "japanese_pc_nfer",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [{"key_code": "lang2"}]
-                }
-            ]
-        },
-        {
-            "description": "変換をかなへ",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "japanese_pc_xfer",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [{"key_code": "lang1"}]
-                }
-            ]
-        },
-        {
-            "description": "underscoreをbackslashにする",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "international1",
-                        "modifiers": {
-                            "optional": [
-                                "caps_lock"
-                            ]
-                        }
-                    },
-                    "to": [
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
                         {
-                            "key_code": "international3",
-                            "modifiers": [
-                                "left_option"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "１秒間押し続けないとcommand-qが実行されない設定",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "q",
-                        "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
-                    },
-                    "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
-                    "to_if_held_down": [
-                        { 
-                            "key_code": "q",
-                            "modifiers": [ "command" ],
-                            "repeat": false
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "１秒間押し続けないとcommand-wが実行されない設定",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "w",
-                        "modifiers": { "mandatory": [ "command" ], "optional": [ "caps_lock" ] }
-                    },
-                    "parameters": { "basic.to_if_held_down_threshold_milliseconds": 1000 },
-                    "to_if_held_down": [
+                            "from": { "key_code": "japanese_pc_katakana" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
                         {
-                            "key_code": "w",
-                            "modifiers": [ "command" ],
-                            "repeat": false
+                            "from": { "key_code": "japanese_pc_nfer" },
+                            "to": [{ "key_code": "japanese_eisuu" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_xfer" },
+                            "to": [{ "key_code": "japanese_kana" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 512,
+                        "vendor_id": 2131
+                    },
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "application" },
+                            "to": [{ "key_code": "power" }]
+                        },
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_katakana" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_nfer" },
+                            "to": [{ "key_code": "japanese_eisuu" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_xfer" },
+                            "to": [{ "key_code": "japanese_kana" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 53250,
+                        "vendor_id": 1241
+                    },
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "japanese_pc_katakana" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_nfer" },
+                            "to": [{ "key_code": "japanese_eisuu" }]
+                        },
+                        {
+                            "from": { "key_code": "japanese_pc_xfer" },
+                            "to": [{ "key_code": "japanese_kana" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 30360,
+                        "vendor_id": 3141
+                    },
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "insert" },
+                            "to": [{ "consumer_key_code": "eject" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
                         }
                     ]
                 }
-            ]
-        },
-        {
-            "description": "日本語入力中はM式配列にする",
-            "manipulators": 
-[
-{ "type":"basic",
-  "from": {"key_code":"q"},
-  "to": [{"key_code":"v"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"w"},
-  "to": [{"key_code":"l"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"e"},
-  "to": [{"key_code":"slash"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"r"},
-  "to": [{"key_code":"f"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"t"},
-  "to": [{"key_code":"c"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"y"},
-  "to": [{"key_code":"m"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"u"},
-  "to": [{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"i"},
-  "to": [{"key_code":"r"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"o"},
-  "to": [{"key_code":"w"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"p"},
-  "to": [{"key_code":"p"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"a"},
-  "to": [{"key_code":"e"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"s"},
-  "to": [{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"d"},
-  "to": [{"key_code":"i"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"f"},
-  "to": [{"key_code":"a"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"g"},
-  "to": [{"key_code":"o"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"h"},
-  "to": [{"key_code":"k"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"j"},
-  "to": [{"key_code":"s"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"k"},
-  "to": [{"key_code":"t"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"l"},
-  "to": [{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"semicolon"},
-  "to": [{"key_code":"h"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"z"},
-  "to": [{"key_code":"e"},{"key_code":"i"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"x"},
-  "to": [{"key_code":"u"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"c"},
-  "to": [{"key_code":"u"},{"key_code":"i"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"v"},
-  "to": [{"key_code":"a"},{"key_code":"i"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"b"},
-  "to": [{"key_code":"o"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"n"},
-  "to": [{"key_code":"g"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"m"},
-  "to": [{"key_code":"z"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"comma"},
-  "to": [{"key_code":"d"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"period"},
-  "to": [{"key_code":"period"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"slash"},
-  "to": [{"key_code":"b"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"q","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"e"},{"key_code":"k"},{"key_code":"i"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"w","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"u"},{"key_code":"k"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"e","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"i"},{"key_code":"k"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"r","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"a"},{"key_code":"k"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"t","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"o"},{"key_code":"k"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"y","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"m"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"u","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"x"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"i","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"r"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"o","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"p","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"p"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"a","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"e"},{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"s","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"u"},{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"d","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"i"},{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"f","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"a"},{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"g","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"o"},{"key_code":"n"},{"key_code":"n"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"h","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"k"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"j","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"s"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"k","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"t"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"l","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"n"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"semicolon","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"h"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"z","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"e"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"x","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"u"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"c","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"u"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"v","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"a"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"b","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"o"},{"key_code":"t"},{"key_code":"u"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"n","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"g"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"m","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"z"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"comma","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"d"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"period","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"comma"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-},
-{ "type":"basic",
-  "from": {"key_code":"slash","modifiers":{"mandatory":["shift"]}},
-  "to": [{"key_code":"b"},{"key_code":"y"}],
-  "conditions": [{"type":"input_source_if", "input_sources":[{"language":"ja"}]}]
-}
-]
+            ],
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f3" },
+                    "to": [{ "key_code": "mission_control" }]
+                },
+                {
+                    "from": { "key_code": "f4" },
+                    "to": [{ "key_code": "launchpad" }]
+                },
+                {
+                    "from": { "key_code": "f5" },
+                    "to": [{ "key_code": "illumination_decrement" }]
+                },
+                {
+                    "from": { "key_code": "f6" },
+                    "to": [{ "key_code": "illumination_increment" }]
+                },
+                {
+                    "from": { "key_code": "f9" },
+                    "to": [{ "consumer_key_code": "fastforward" }]
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "left_shift" },
+                    "to": [{ "key_code": "japanese_eisuu" }]
+                },
+                {
+                    "from": { "key_code": "pause" },
+                    "to": [{ "consumer_key_code": "eject" }]
+                },
+                {
+                    "from": { "key_code": "print_screen" },
+                    "to": [{ "key_code": "play_or_pause" }]
+                },
+                {
+                    "from": { "key_code": "right_shift" },
+                    "to": [{ "key_code": "japanese_kana" }]
+                },
+                {
+                    "from": { "key_code": "scroll_lock" },
+                    "to": [{ "key_code": "vk_dashboard" }]
+                }
+            ],
+            "virtual_hid_keyboard": {
+                "caps_lock_delay_milliseconds": 0,
+                "country_code": 0,
+                "keyboard_type": "jis",
+                "keyboard_type_v2": "jis"
+            }
         }
     ]
 }
